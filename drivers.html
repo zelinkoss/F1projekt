@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 Turbo Hybrid Era</title>
+  <link rel="stylesheet" href="styledriver.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>F1 Turbo Hybrid Era</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">History</a></li>
+          <li><a href="cars.html">Cars</a></li>
+          <li><a href="drivers.html">Drivers</a></li>
+          <li><a href="technologie.html">Technology</a></li>
+          <li><a href="https://www.formula1.com/en/latest/all" target="_blank">News</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h2> Drivers of the Turbo-Hybrid Era</h2>
+        <p>Discover the world of Formula 1 drivers.</p>
+        <a href="#features" class="btn" onclick="scrollToSection('features')">Explore Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="eminem">
+    <div class="container">
+      <div class="person">
+        <img src="img/Ferrari.jpg" alt="Ferrari">
+        <div class="details">
+          <h3>Sebastian Vettel</h3>
+          <p>The four time world champion, he left redbull and went to ferrari where he battled with Lewis Hamilton for the championship.</p>
+        </div>
+      </div>
+      <div class="person">
+        <img src="img/lewis.jpg" alt="Lewis Hamilton">
+        <div class="details">
+          <h3>Lewis Hamilton / Mercedes</h3>
+          <p>Details about Lewis Hamilton</p>
+        </div>
+      </div>
+      <div class="person">
+        <img src="img/nico.jpg" alt="Nico Rosberg">
+        <div class="details">
+          <h3>Nico Rosberg</h3>
+          <p>Details about Nico Rosberg</p>
+        </div>
+      </div>
+      <div class="person">
+        <img src="img/monacodanny.jpg" alt="Daniel Ricciardo" >
+        <div class="details">
+          <h3>Daniel Ricciardo</h3>
+          <p>Details about Nico Rosberg</p>
+        </div>
+      </div>
+      <!-- Add more person divs as needed -->
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 F1 Turbo Hybrid Era. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.person').forEach(person => {
+      person.addEventListener('mouseenter', function() {
+        this.querySelector('.details').style.display = 'block';
+      });
+
+      person.addEventListener('mouseleave', function() {
+        this.querySelector('.details').style.display = 'none';
+      });
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
