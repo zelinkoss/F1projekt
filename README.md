@@ -1,4 +1,4 @@
-# blackjack
+# F1
 
 použité technologie:
   -HTML
