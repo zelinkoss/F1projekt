@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 Turbo Hybrid Era</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>F1 Turbo Hybrid Era</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">History</a></li>
+          <li><a href="teams.html">Cars</a></li>
+          <li><a href="drivers.html">Drivers</a></li>
+          <li><a href="technologie.html">Technology</a></li>
+          <li><a href="https://www.formula1.com/en" target="_blank">News</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h2>Here you can contact us</h2>
+      </div>
+    </div>
+  </section>
+
+  <div class="form-container">
+    <div class="form-container">
+        <form class="form" action="send.php" method="post">
+            <div class="form-group">
+                <label for="email">Company Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">How Can We Help You?</label>
+                <textarea name="zprava" id="message" rows="10" cols="50" required></textarea>
+            </div>
+            <button class="form-submit-btn" type="submit">Submit</button>
+        </form>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 F1 Turbo Hybrid Era. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+ 
+        var i = 0;
+            var txt = '>Welcome to the F1 Turbo Hybrid Era';
+            var speed = 60;
+ 
+            function text() {
+                if (i < txt.length) {
+                    document.getElementById("hero-content").innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(text, speed);
+                }
+            }
+  </script>
+</body>
+</html>
